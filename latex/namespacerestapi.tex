@@ -1,0 +1,53 @@
+\hypertarget{namespacerestapi}{}\doxysection{restapi Namespace Reference}
+\label{namespacerestapi}\index{restapi@{restapi}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerestapi_ad50030affc2edceb4e06cf7441041b2b}\label{namespacerestapi_ad50030affc2edceb4e06cf7441041b2b}} 
+def {\bfseries predict} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerestapi_ab67e91eafeedfce76d273d228bfcc61f}\label{namespacerestapi_ab67e91eafeedfce76d273d228bfcc61f}} 
+{\bfseries app} = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacerestapi_a1e660e2023cc6839465fc0fac8762fdf}\label{namespacerestapi_a1e660e2023cc6839465fc0fac8762fdf}} 
+string {\bfseries D\+E\+T\+E\+C\+T\+I\+O\+N\+\_\+\+U\+RL} = \char`\"{}/v1/object-\/detection/yolov5s\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacerestapi_a2efc9477b941518a6bc3e37700181d07}\label{namespacerestapi_a2efc9477b941518a6bc3e37700181d07}} 
+{\bfseries methods}
+\item 
+\mbox{\Hypertarget{namespacerestapi_ac09a9470500f718df112000df104b8e9}\label{namespacerestapi_ac09a9470500f718df112000df104b8e9}} 
+{\bfseries parser} = argparse.\+Argument\+Parser(description=\char`\"{}Flask A\+PI exposing Y\+O\+L\+Ov5 model\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacerestapi_a4c0e625ca8c34606cb87b26cd4a4f990}\label{namespacerestapi_a4c0e625ca8c34606cb87b26cd4a4f990}} 
+{\bfseries default}
+\item 
+\mbox{\Hypertarget{namespacerestapi_a01928afb3531bb7753423125f110ec00}\label{namespacerestapi_a01928afb3531bb7753423125f110ec00}} 
+{\bfseries type}
+\item 
+\mbox{\Hypertarget{namespacerestapi_afb0b7610bdae6b238281ac6d234e20c0}\label{namespacerestapi_afb0b7610bdae6b238281ac6d234e20c0}} 
+{\bfseries int}
+\item 
+\mbox{\Hypertarget{namespacerestapi_aa5e69f0f49976c9f4398a99f33a15e43}\label{namespacerestapi_aa5e69f0f49976c9f4398a99f33a15e43}} 
+{\bfseries help}
+\item 
+\mbox{\Hypertarget{namespacerestapi_a39f2e463b88cc800a2f9cc180eca286b}\label{namespacerestapi_a39f2e463b88cc800a2f9cc180eca286b}} 
+{\bfseries args} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\Hypertarget{namespacerestapi_a0ebab1502b00924d63f129c4e85eeaaa}\label{namespacerestapi_a0ebab1502b00924d63f129c4e85eeaaa}} 
+{\bfseries model} = torch.\+hub.\+load(\char`\"{}ultralytics/yolov5\char`\"{}, \char`\"{}yolov5s\char`\"{}, force\+\_\+reload=True)
+\item 
+\mbox{\Hypertarget{namespacerestapi_ac999ff2b63c7ab76d82e8d674b739ed4}\label{namespacerestapi_ac999ff2b63c7ab76d82e8d674b739ed4}} 
+{\bfseries host}
+\item 
+\mbox{\Hypertarget{namespacerestapi_afe9c0ef8ee6f8f5303964f6b3f3741f2}\label{namespacerestapi_afe9c0ef8ee6f8f5303964f6b3f3741f2}} 
+{\bfseries port}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Run a rest API exposing the yolov5s object detection model
+\end{DoxyVerb}
+ 

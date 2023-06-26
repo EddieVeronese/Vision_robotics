@@ -1,0 +1,72 @@
+\hypertarget{classutils_1_1callbacks_1_1Callbacks}{}\doxysection{utils.\+callbacks.\+Callbacks Class Reference}
+\label{classutils_1_1callbacks_1_1Callbacks}\index{utils.callbacks.Callbacks@{utils.callbacks.Callbacks}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1callbacks_1_1Callbacks_a9ef451c1625c4d59220310f1d552e5fb}\label{classutils_1_1callbacks_1_1Callbacks_a9ef451c1625c4d59220310f1d552e5fb}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classutils_1_1callbacks_1_1Callbacks_ac1d0b300ef6ca14729e506e3e92a4d04}{register\+\_\+action}} (self, hook, name=\textquotesingle{}\textquotesingle{}, callback=None)
+\item 
+def \mbox{\hyperlink{classutils_1_1callbacks_1_1Callbacks_aaf593e700dac7848d3a3bde7f0848cbb}{get\+\_\+registered\+\_\+actions}} (self, hook=None)
+\item 
+def \mbox{\hyperlink{classutils_1_1callbacks_1_1Callbacks_a431c67efc3711a6e8496fd0c6c85a490}{run}} (self, hook, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1callbacks_1_1Callbacks_aa068e3af6f2a405c3933d18d9633b4d0}\label{classutils_1_1callbacks_1_1Callbacks_aa068e3af6f2a405c3933d18d9633b4d0}} 
+{\bfseries stop\+\_\+training}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}"
+Handles all registered callbacks for YOLOv5 Hooks
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classutils_1_1callbacks_1_1Callbacks_aaf593e700dac7848d3a3bde7f0848cbb}\label{classutils_1_1callbacks_1_1Callbacks_aaf593e700dac7848d3a3bde7f0848cbb}} 
+\index{utils.callbacks.Callbacks@{utils.callbacks.Callbacks}!get\_registered\_actions@{get\_registered\_actions}}
+\index{get\_registered\_actions@{get\_registered\_actions}!utils.callbacks.Callbacks@{utils.callbacks.Callbacks}}
+\doxysubsubsection{\texorpdfstring{get\_registered\_actions()}{get\_registered\_actions()}}
+{\footnotesize\ttfamily def utils.\+callbacks.\+Callbacks.\+get\+\_\+registered\+\_\+actions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{hook = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}"
+Returns all the registered actions by callback hook
+
+Args:
+    hook The name of the hook to check, defaults to all
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1callbacks_1_1Callbacks_ac1d0b300ef6ca14729e506e3e92a4d04}\label{classutils_1_1callbacks_1_1Callbacks_ac1d0b300ef6ca14729e506e3e92a4d04}} 
+\index{utils.callbacks.Callbacks@{utils.callbacks.Callbacks}!register\_action@{register\_action}}
+\index{register\_action@{register\_action}!utils.callbacks.Callbacks@{utils.callbacks.Callbacks}}
+\doxysubsubsection{\texorpdfstring{register\_action()}{register\_action()}}
+{\footnotesize\ttfamily def utils.\+callbacks.\+Callbacks.\+register\+\_\+action (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{hook,  }\item[{}]{name = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{callback = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register a new action to a callback hook
+
+Args:
+    hook        The callback hook name to register the action to
+    name        The name of the action for later reference
+    callback    The callback to fire
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1callbacks_1_1Callbacks_a431c67efc3711a6e8496fd0c6c85a490}\label{classutils_1_1callbacks_1_1Callbacks_a431c67efc3711a6e8496fd0c6c85a490}} 
+\index{utils.callbacks.Callbacks@{utils.callbacks.Callbacks}!run@{run}}
+\index{run@{run}!utils.callbacks.Callbacks@{utils.callbacks.Callbacks}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def utils.\+callbacks.\+Callbacks.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{hook,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loop through the registered actions and fire all callbacks
+
+Args:
+    hook The name of the hook to check, defaults to all
+    args Arguments to receive from YOLOv5
+    kwargs Keyword Arguments to receive from YOLOv5
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/yolov5/utils/callbacks.\+py\end{DoxyCompactItemize}

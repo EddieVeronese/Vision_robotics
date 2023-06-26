@@ -1,0 +1,204 @@
+Toggle Details
+
+📚 This guide explains how to use {\bfseries{Weights \& Biases}} (W\&B) with Y\+O\+L\+Ov5 🚀. U\+P\+D\+A\+T\+ED 29 September 2021.
+\begin{DoxyItemize}
+\item \href{\#about-weights-&-biases}{\texttt{ About Weights \& Biases}}
+\item \href{\#first-time-setup}{\texttt{ First-\/\+Time Setup}}
+\item \href{\#viewing-runs}{\texttt{ Viewing runs}}
+\item \href{\#disabling-wandb}{\texttt{ Disabling wandb}}
+\item \href{\#advanced-usage}{\texttt{ Advanced Usage\+: Dataset Versioning and Evaluation}}
+\item \href{\#reports}{\texttt{ Reports\+: Share your work with the world!}}
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md26}{}\doxysubsection{About Weights \& Biases}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md26}
+Think of \href{https://wandb.ai/site?utm_campaign=repo_yolo_wandbtutorial}{\texttt{ W\&B}} like Git\+Hub for machine learning models. With a few lines of code, save everything you need to debug, compare and reproduce your models — architecture, hyperparameters, git commits, model weights, G\+PU usage, and even datasets and predictions.
+
+Used by top researchers including teams at Open\+AI, Lyft, Github, and M\+I\+LA, W\&B is part of the new standard of best practices for machine learning. How W\&B can help you optimize your machine learning workflows\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://wandb.ai/wandb/getting-started/reports/Visualize-Debug-Machine-Learning-Models--VmlldzoyNzY5MDk\#Free-2}{\texttt{ Debug}} model performance in real time
+\item \href{https://wandb.ai/wandb/getting-started/reports/Visualize-Debug-Machine-Learning-Models--VmlldzoyNzY5MDk\#System-4}{\texttt{ G\+PU usage}} visualized automatically
+\item \href{https://wandb.ai/wandb/customizable-charts/reports/Powerful-Custom-Charts-To-Debug-Model-Peformance--VmlldzoyNzY4ODI}{\texttt{ Custom charts}} for powerful, extensible visualization
+\item \href{https://wandb.ai/wandb/getting-started/reports/Visualize-Debug-Machine-Learning-Models--VmlldzoyNzY5MDk\#Share-8}{\texttt{ Share insights}} interactively with collaborators
+\item \href{https://docs.wandb.com/sweeps}{\texttt{ Optimize hyperparameters}} efficiently
+\item \href{https://docs.wandb.com/artifacts}{\texttt{ Track}} datasets, pipelines, and production models
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md27}{}\doxysubsection{First-\/\+Time Setup}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md27}
+$<$details open$>$
+
+When you first train, W\&B will prompt you to create a new account and will generate an {\bfseries{A\+PI key}} for you. If you are an existing user you can retrieve your key from \href{https://wandb.ai/authorize}{\texttt{ https\+://wandb.\+ai/authorize}}. This key is used to tell W\&B where to log your data. You only need to supply your key once, and then it is remembered on the same device.
+
+W\&B will create a cloud {\bfseries{project}} (default is \textquotesingle{}Y\+O\+L\+Ov5\textquotesingle{}) for your training runs, and each new training run will be provided a unique run {\bfseries{name}} within that project as project/name. You can also manually set your project and run name as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py -\/-\/project ... -\/-\/name ...}
+\end{DoxyCode}
+
+
+Y\+O\+L\+Ov5 notebook example\+: \href{https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb}{\texttt{ }} \href{https://www.kaggle.com/ultralytics/yolov5}{\texttt{ }} 
+
+$<$/details$>$\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md28}{}\doxysubsection{Viewing Runs}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md28}
+$<$details open$>$
+
+Toggle Details 
+
+Run information streams from your environment to the W\&B cloud console as you train. This allows you to monitor and even cancel runs in {\bfseries{realtime}} . All important information is logged\+:
+
+
+\begin{DoxyItemize}
+\item Training \& Validation losses
+\item Metrics\+: Precision, Recall, m\+AP@0.\+5, m\+AP@0.\+5\+:0.\+95
+\item Learning Rate over time
+\item A bounding box debugging panel, showing the training progress over time
+\item G\+PU\+: Type, {\bfseries{G\+PU Utilization}}, power, temperature, {\bfseries{C\+U\+DA memory usage}}
+\item System\+: Disk I/0, C\+PU utilization, R\+AM memory usage
+\item Your trained model as W\&B Artifact
+\item Environment\+: OS and Python types, Git repository and state, {\bfseries{training command}}
+\end{DoxyItemize}
+
+
+
+$<$/details$>$\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md29}{}\doxysubsection{Disabling wandb}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md29}
+
+\begin{DoxyItemize}
+\item training after running {\ttfamily wandb disabled} inside that directory creates no wandb run 
+\item To enable wandb again, run {\ttfamily wandb online} 
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md30}{}\doxysubsection{Advanced Usage}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md30}
+You can leverage W\&B artifacts and Tables integration to easily visualize and manage your datasets, models and training evaluations. Here are some quick examples to get you started. $<$details open$>$ \doxysubsubsection*{1\+: Train and Log Evaluation simultaneousy }
+
+This is an extension of the previous section, but it\textquotesingle{}ll also training after uploading the dataset. {\bfseries{ This also evaluation Table}} Evaluation table compares your predictions and ground truths across the validation set for each epoch. It uses the references to the already uploaded datasets, so no images will be uploaded from your system more than once. $<$details open$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py \&ndash;upload\_data val}
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+\doxysubsubsection*{2. Visualize and Version Datasets}
+
+Log, visualize, dynamically query, and understand your data with \href{https://docs.wandb.ai/guides/data-vis/tables}{\texttt{ W\&B Tables}}. You can use the following command to log your dataset as a W\&B Table. This will generate a 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{dataset\}\_wandb.yaml}
+\end{DoxyCode}
+ file which can be used to train from dataset artifact. $<$details$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python utils/logger/wandb/log\_dataset.py \&ndash;project ... \&ndash;name ... \&ndash;data .. }
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+\doxysubsubsection*{3\+: Train using dataset artifact }
+
+When you upload a dataset as described in the first section, you get a new config file with an added {\ttfamily \+\_\+wandb} to its name. This file contains the information that can be used to train a model directly from the dataset artifact. {\bfseries{ This also logs evaluation }} $<$details$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py \&ndash;data \{data\}\_wandb.yaml }
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+\doxysubsubsection*{4\+: Save model checkpoints as artifacts }
+
+To enable saving and versioning checkpoints of your experiment, pass {\ttfamily -\/-\/save\+\_\+period n} with the base cammand, where {\ttfamily n} represents checkpoint interval. You can also log both the dataset and model checkpoints simultaneously. If not passed, only the final model will be logged
+
+$<$details$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py \&ndash;save\_period 1 }
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+$<$/details$>$
+
+\doxysubsubsection*{5\+: Resume runs from checkpoint artifacts. }
+
+Any run can be resumed using artifacts if the 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\&ndash;resume}
+\end{DoxyCode}
+ argument starts with~
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wandb-\/artifact://}
+\end{DoxyCode}
+~prefix followed by the run path, i.\+e,~
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wandb-\/artifact://username/project/runid }
+\end{DoxyCode}
+. This doesn\textquotesingle{}t require the model checkpoint to be present on the local system.
+
+$<$details$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py \&ndash;resume wandb-\/artifact://\{run\_path\} }
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+\doxysubsubsection*{6\+: Resume runs from dataset artifact \& checkpoint artifacts. }
+
+{\bfseries{ Local dataset or model checkpoints are not required. This can be used to resume runs directly on a different device }} The syntax is same as the previous section, but you\textquotesingle{}ll need to lof both the dataset and model checkpoints as artifacts, i.\+e, set bot 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\&ndash;upload\_dataset}
+\end{DoxyCode}
+ or train from 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_wandb.yaml}
+\end{DoxyCode}
+ file and set 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\&ndash;save\_period}
+\end{DoxyCode}
+
+
+$<$details$>$
+
+{\bfseries{Usage}} 
+
+{\bfseries{Code}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python train.py \&ndash;resume wandb-\/artifact://\{run\_path\} }
+\end{DoxyCode}
+
+
+ $<$/details$>$
+
+$<$/details$>$
+
+\doxysubsubsection*{Reports }
+
+W\&B Reports can be created from your saved runs for sharing online. Once a report is created you will receive a link you can use to publically share your results. Here is an example report created from the C\+O\+C\+O128 tutorial trainings of all four Y\+O\+L\+Ov5 models (\href{https://wandb.ai/glenn-jocher/yolov5_tutorial/reports/YOLOv5-COCO128-Tutorial-Results--VmlldzozMDI5OTY}{\texttt{ link}}).
+
+\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md31}{}\doxysubsection{Environments}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md31}
+Y\+O\+L\+Ov5 may be run in any of the following up-\/to-\/date verified environments (with all dependencies including \href{https://developer.nvidia.com/cuda}{\texttt{ C\+U\+DA}}/\href{https://developer.nvidia.com/cudnn}{\texttt{ C\+U\+D\+NN}}, \href{https://www.python.org/}{\texttt{ Python}} and \href{https://pytorch.org/}{\texttt{ Py\+Torch}} preinstalled)\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Google Colab and Kaggle}} notebooks with free G\+PU\+: \href{https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb}{\texttt{ }} \href{https://www.kaggle.com/ultralytics/yolov5}{\texttt{ }}
+\item {\bfseries{Google Cloud}} Deep Learning VM. See \href{https://github.com/ultralytics/yolov5/wiki/GCP-Quickstart}{\texttt{ G\+CP Quickstart Guide}}
+\item {\bfseries{Amazon}} Deep Learning A\+MI. See \href{https://github.com/ultralytics/yolov5/wiki/AWS-Quickstart}{\texttt{ A\+WS Quickstart Guide}}
+\item {\bfseries{Docker Image}}. See \href{https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart}{\texttt{ Docker Quickstart Guide}} \href{https://hub.docker.com/r/ultralytics/yolov5}{\texttt{ }}
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md32}{}\doxysubsection{Status}\label{md_nodes_yolov5_ros_src_yolov5_utils_loggers_wandb_README_autotoc_md32}
+
+
+If this badge is green, all \href{https://github.com/ultralytics/yolov5/actions}{\texttt{ Y\+O\+L\+Ov5 Git\+Hub Actions}} Continuous Integration (CI) tests are currently passing. CI tests verify correct operation of Y\+O\+L\+Ov5 training (\href{https://github.com/ultralytics/yolov5/blob/master/train.py}{\texttt{ train.\+py}}), validation (\href{https://github.com/ultralytics/yolov5/blob/master/val.py}{\texttt{ val.\+py}}), inference (\href{https://github.com/ultralytics/yolov5/blob/master/detect.py}{\texttt{ detect.\+py}}) and export (\href{https://github.com/ultralytics/yolov5/blob/master/export.py}{\texttt{ export.\+py}}) on Mac\+OS, Windows, and Ubuntu every 24 hours and on every commit. 

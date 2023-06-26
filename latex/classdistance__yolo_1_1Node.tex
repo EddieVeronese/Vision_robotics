@@ -1,0 +1,268 @@
+\hypertarget{classdistance__yolo_1_1Node}{}\doxysection{distance\+\_\+yolo.\+Node Class Reference}
+\label{classdistance__yolo_1_1Node}\index{distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_ad53045a2d38df570b9502ed7e8bdabce}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \mbox{\hyperlink{classdistance__yolo_1_1Node}{Node}} ciao. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_af4a4a8c09023ff208d06b48b239bb99e}{bounding\+\_\+boxes\+\_\+callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Callback function for bounding boxes. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a00d6ebb1573b494179822ea0370e782b}{refine\+\_\+registration}} (self, source, target, source\+\_\+fpfh, target\+\_\+fpfh, voxel\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Refines the registration result using Iterative Closest Point (I\+CP) algorithm. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a6f821fbc0cc9b94294e347b8809c8050}{switch\+\_\+case}} (self, case)
+\begin{DoxyCompactList}\small\item\em Switch case function for setting the P\+LY file based on block recognized. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a39d2a6cd0a63ef3ad1680ef2e7e9bbca}{preprocess\+\_\+point\+\_\+cloud}} (self, pcd, voxel\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Preprocesses a point cloud by downsampling and computing F\+P\+FH features. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_ab7e1346c777dea9c39683632b9754e48}{prepare\+\_\+dataset}} (self, voxel\+\_\+size, pcd\+\_\+stored, pcd)
+\begin{DoxyCompactList}\small\item\em Prepares the dataset for global registration by downsampling and computing features. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a61b0744591fdd0115c334e411560be34}{execute\+\_\+global\+\_\+registration}} (self, source\+\_\+down, target\+\_\+down, source\+\_\+fpfh, target\+\_\+fpfh, voxel\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Executes the global registration between downsampled point clouds using feature matching. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a890f00daea0e4f9f2a1cc411bdf2035d}{draw\+\_\+registration\+\_\+result}} (self, source, target, transformation)
+\begin{DoxyCompactList}\small\item\em Draws the registration result by visualizing the transformed source and target point clouds. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a39275fceb72915c2d11a9146c22c0b21}{visualize\+\_\+point\+\_\+clouds\+\_\+before\+\_\+registration}} (self, source, target)
+\begin{DoxyCompactList}\small\item\em Visualizes the source and target point clouds before registration. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdistance__yolo_1_1Node_a7196c72406b823b221c73a4ac2f6583b}{visualize\+\_\+point\+\_\+cloud\+\_\+with\+\_\+axes}} (self, pcd)
+\begin{DoxyCompactList}\small\item\em Visualizes a single point cloud along with a coordinate frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_ad8c6cfe3a3637b2a8ea7575a82867738}\label{classdistance__yolo_1_1Node_ad8c6cfe3a3637b2a8ea7575a82867738}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_ad8c6cfe3a3637b2a8ea7575a82867738}{pcd\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em variable to store the pcd \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a8ed16ec7bd46c84c41814ea19545db8d}\label{classdistance__yolo_1_1Node_a8ed16ec7bd46c84c41814ea19545db8d}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_a8ed16ec7bd46c84c41814ea19545db8d}{result\+\_\+ransac}}
+\begin{DoxyCompactList}\small\item\em variable to store result of point cloud comparison \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a8074336f8576f36be7997c981293d425}\label{classdistance__yolo_1_1Node_a8074336f8576f36be7997c981293d425}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_a8074336f8576f36be7997c981293d425}{boxes}}
+\begin{DoxyCompactList}\small\item\em variable to store the calculated box coordinates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_adefb7b19d1672fda0f8a0fa359e3f55f}\label{classdistance__yolo_1_1Node_adefb7b19d1672fda0f8a0fa359e3f55f}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_adefb7b19d1672fda0f8a0fa359e3f55f}{flag\+\_\+box}}
+\begin{DoxyCompactList}\small\item\em indicates whether new information about bounding boxes has been received. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a3b0dcdbe303302c7ea006376bb0084cb}\label{classdistance__yolo_1_1Node_a3b0dcdbe303302c7ea006376bb0084cb}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_a3b0dcdbe303302c7ea006376bb0084cb}{flag\+\_\+cloud}}
+\begin{DoxyCompactList}\small\item\em indicates whether new information about the point cloud has been received. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a92b2e628f4d8c6c2ab14176b46f199d3}\label{classdistance__yolo_1_1Node_a92b2e628f4d8c6c2ab14176b46f199d3}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_a92b2e628f4d8c6c2ab14176b46f199d3}{positions\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em This publisher is used to send messages of type finals to the \textquotesingle{}messaggi\textquotesingle{} topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a058ab07d1bb7520e00091cf5372f6b68}\label{classdistance__yolo_1_1Node_a058ab07d1bb7520e00091cf5372f6b68}} 
+\mbox{\hyperlink{classdistance__yolo_1_1Node_a058ab07d1bb7520e00091cf5372f6b68}{result\+\_\+icp}}
+\begin{DoxyCompactList}\small\item\em refine the registration using I\+CP algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_ad53045a2d38df570b9502ed7e8bdabce}\label{classdistance__yolo_1_1Node_ad53045a2d38df570b9502ed7e8bdabce}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \mbox{\hyperlink{classdistance__yolo_1_1Node}{Node}} ciao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & Istanza della classe \mbox{\hyperlink{classdistance__yolo_1_1Node}{Node}}. Inizializza l\textquotesingle{}istanza della classe \mbox{\hyperlink{classdistance__yolo_1_1Node}{Node}} e configura i parametri iniziali. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_af4a4a8c09023ff208d06b48b239bb99e}\label{classdistance__yolo_1_1Node_af4a4a8c09023ff208d06b48b239bb99e}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!bounding\_boxes\_callback@{bounding\_boxes\_callback}}
+\index{bounding\_boxes\_callback@{bounding\_boxes\_callback}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{bounding\_boxes\_callback()}{bounding\_boxes\_callback()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+bounding\+\_\+boxes\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Callback function for bounding boxes. 
+
+This function is called when bounding box data is received. It processes the data and stores the calculated box coordinates and class information in the \textquotesingle{}boxes\textquotesingle{} attribute. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data containing bounding box information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a890f00daea0e4f9f2a1cc411bdf2035d}\label{classdistance__yolo_1_1Node_a890f00daea0e4f9f2a1cc411bdf2035d}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!draw\_registration\_result@{draw\_registration\_result}}
+\index{draw\_registration\_result@{draw\_registration\_result}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{draw\_registration\_result()}{draw\_registration\_result()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+draw\+\_\+registration\+\_\+result (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{target,  }\item[{}]{transformation }\end{DoxyParamCaption})}
+
+
+
+Draws the registration result by visualizing the transformed source and target point clouds. 
+
+This function takes the source and target point clouds along with the transformation matrix and visualizes the transformed source and target point clouds. It also displays a coordinate frame indicating the final transformation. 
+\begin{DoxyParams}{Parameters}
+{\em source} & The source point cloud before transformation. \\
+\hline
+{\em target} & The target point cloud before transformation. \\
+\hline
+{\em transformation} & The transformation matrix to apply to the source point cloud. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a61b0744591fdd0115c334e411560be34}\label{classdistance__yolo_1_1Node_a61b0744591fdd0115c334e411560be34}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!execute\_global\_registration@{execute\_global\_registration}}
+\index{execute\_global\_registration@{execute\_global\_registration}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{execute\_global\_registration()}{execute\_global\_registration()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+execute\+\_\+global\+\_\+registration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source\+\_\+down,  }\item[{}]{target\+\_\+down,  }\item[{}]{source\+\_\+fpfh,  }\item[{}]{target\+\_\+fpfh,  }\item[{}]{voxel\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Executes the global registration between downsampled point clouds using feature matching. 
+
+This function takes the downsampled source and target point clouds, along with their corresponding F\+P\+FH features, and performs global registration using R\+A\+N\+S\+A\+C-\/based feature matching. It returns the registration result. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+down} & The downsampled source point cloud. \\
+\hline
+{\em target\+\_\+down} & The downsampled target point cloud. \\
+\hline
+{\em source\+\_\+fpfh} & The F\+P\+FH features of the source point cloud. \\
+\hline
+{\em target\+\_\+fpfh} & The F\+P\+FH features of the target point cloud. \\
+\hline
+{\em voxel\+\_\+size} & The voxel size used for downsampling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The registration result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_ab7e1346c777dea9c39683632b9754e48}\label{classdistance__yolo_1_1Node_ab7e1346c777dea9c39683632b9754e48}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!prepare\_dataset@{prepare\_dataset}}
+\index{prepare\_dataset@{prepare\_dataset}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{prepare\_dataset()}{prepare\_dataset()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+prepare\+\_\+dataset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{voxel\+\_\+size,  }\item[{}]{pcd\+\_\+stored,  }\item[{}]{pcd }\end{DoxyParamCaption})}
+
+
+
+Prepares the dataset for global registration by downsampling and computing features. 
+
+This function takes a point cloud and performs voxel downsampling and computes Fast Point Feature Histograms (F\+P\+FH). It returns the original source and target point clouds, as well as the downsampled versions and their respective F\+P\+FH features. 
+\begin{DoxyParams}{Parameters}
+{\em voxel\+\_\+size} & The voxel size for downsampling. \\
+\hline
+{\em pcd\+\_\+stored} & The stored point cloud used as the target for registration. \\
+\hline
+{\em pcd} & The input point cloud to register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the source, target, downsampled source, downsampled target, source F\+P\+FH features, and target F\+P\+FH features. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a39d2a6cd0a63ef3ad1680ef2e7e9bbca}\label{classdistance__yolo_1_1Node_a39d2a6cd0a63ef3ad1680ef2e7e9bbca}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!preprocess\_point\_cloud@{preprocess\_point\_cloud}}
+\index{preprocess\_point\_cloud@{preprocess\_point\_cloud}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{preprocess\_point\_cloud()}{preprocess\_point\_cloud()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+preprocess\+\_\+point\+\_\+cloud (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pcd,  }\item[{}]{voxel\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Preprocesses a point cloud by downsampling and computing F\+P\+FH features. 
+
+This function takes a point cloud and performs voxel downsampling using the specified voxel size. It then estimates the normals and computes Fast Point Feature Histograms (F\+P\+FH) for the downsampled point cloud. The downsampled point cloud and its F\+P\+FH features are returned. 
+\begin{DoxyParams}{Parameters}
+{\em pcd} & The input point cloud to preprocess. \\
+\hline
+{\em voxel\+\_\+size} & The voxel size for downsampling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the downsampled point cloud and its F\+P\+FH features. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a00d6ebb1573b494179822ea0370e782b}\label{classdistance__yolo_1_1Node_a00d6ebb1573b494179822ea0370e782b}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!refine\_registration@{refine\_registration}}
+\index{refine\_registration@{refine\_registration}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{refine\_registration()}{refine\_registration()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+refine\+\_\+registration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{target,  }\item[{}]{source\+\_\+fpfh,  }\item[{}]{target\+\_\+fpfh,  }\item[{}]{voxel\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Refines the registration result using Iterative Closest Point (I\+CP) algorithm. 
+
+This function takes the source and target point clouds along with their F\+P\+FH features, the voxel size used for downsampling, and the transformation obtained from global registration. It performs refinement of the registration result using I\+CP with point-\/to-\/point transformation estimation. The refined registration result is returned. 
+\begin{DoxyParams}{Parameters}
+{\em source} & The source point cloud. \\
+\hline
+{\em target} & The target point cloud. \\
+\hline
+{\em source\+\_\+fpfh} & The F\+P\+FH features of the source point cloud. \\
+\hline
+{\em target\+\_\+fpfh} & The F\+P\+FH features of the target point cloud. \\
+\hline
+{\em voxel\+\_\+size} & The voxel size used for downsampling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The refined registration result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a6f821fbc0cc9b94294e347b8809c8050}\label{classdistance__yolo_1_1Node_a6f821fbc0cc9b94294e347b8809c8050}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!switch\_case@{switch\_case}}
+\index{switch\_case@{switch\_case}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{switch\_case()}{switch\_case()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+switch\+\_\+case (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{case }\end{DoxyParamCaption})}
+
+
+
+Switch case function for setting the P\+LY file based on block recognized. 
+
+This function takes a case as input and assigns the corresponding P\+LY file path to the \textquotesingle{}pcd\+\_\+file\textquotesingle{} attribute. If the case does not match any of the predefined cases, it prints an error message. 
+\begin{DoxyParams}{Parameters}
+{\em case} & The case to switch upon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a7196c72406b823b221c73a4ac2f6583b}\label{classdistance__yolo_1_1Node_a7196c72406b823b221c73a4ac2f6583b}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!visualize\_point\_cloud\_with\_axes@{visualize\_point\_cloud\_with\_axes}}
+\index{visualize\_point\_cloud\_with\_axes@{visualize\_point\_cloud\_with\_axes}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{visualize\_point\_cloud\_with\_axes()}{visualize\_point\_cloud\_with\_axes()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+visualize\+\_\+point\+\_\+cloud\+\_\+with\+\_\+axes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pcd }\end{DoxyParamCaption})}
+
+
+
+Visualizes a single point cloud along with a coordinate frame. 
+
+This function takes a point cloud and displays it along with a coordinate frame. It provides a visual representation of the point cloud with reference axes. 
+\begin{DoxyParams}{Parameters}
+{\em pcd} & The point cloud to visualize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdistance__yolo_1_1Node_a39275fceb72915c2d11a9146c22c0b21}\label{classdistance__yolo_1_1Node_a39275fceb72915c2d11a9146c22c0b21}} 
+\index{distance\_yolo.Node@{distance\_yolo.Node}!visualize\_point\_clouds\_before\_registration@{visualize\_point\_clouds\_before\_registration}}
+\index{visualize\_point\_clouds\_before\_registration@{visualize\_point\_clouds\_before\_registration}!distance\_yolo.Node@{distance\_yolo.Node}}
+\doxysubsubsection{\texorpdfstring{visualize\_point\_clouds\_before\_registration()}{visualize\_point\_clouds\_before\_registration()}}
+{\footnotesize\ttfamily def distance\+\_\+yolo.\+Node.\+visualize\+\_\+point\+\_\+clouds\+\_\+before\+\_\+registration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+
+
+Visualizes the source and target point clouds before registration. 
+
+This function takes the source and target point clouds, translates them to the origin, and visualizes them with different colors. It provides a view of the point clouds before they are aligned. 
+\begin{DoxyParams}{Parameters}
+{\em source} & The source point cloud before registration. \\
+\hline
+{\em target} & The target point cloud before registration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/distance\+\_\+yolo/src/distance\+\_\+yolo.\+py\end{DoxyCompactItemize}

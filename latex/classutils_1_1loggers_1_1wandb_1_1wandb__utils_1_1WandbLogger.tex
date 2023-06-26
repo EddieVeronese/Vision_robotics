@@ -1,0 +1,295 @@
+\hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger}{}\doxysection{utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger Class Reference}
+\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger}\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a83d64a9e7dba70fea7760934eb789b4b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, opt, run\+\_\+id=None, job\+\_\+type=\textquotesingle{}Training\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02ad1073cee7879fa78f5e9f8245d0ec}{check\+\_\+and\+\_\+upload\+\_\+dataset}} (self, opt)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7f811881a3feaa10b768a65f8a9617db}{setup\+\_\+training}} (self, opt)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02b97b25f4097cd2a9ff8e1e8e58d170}{download\+\_\+dataset\+\_\+artifact}} (self, path, alias)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a0f540d146fc423233eb90e9d70cee304}{download\+\_\+model\+\_\+artifact}} (self, opt)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a4d2428127c8983c17082c25b052ef13c}{log\+\_\+model}} (self, path, opt, epoch, fitness\+\_\+score, best\+\_\+model=False)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af7fe5e712739ef5d2b519fe1c85ff5dd}{log\+\_\+dataset\+\_\+artifact}} (self, data\+\_\+file, single\+\_\+cls, project, overwrite\+\_\+config=False)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_aae2e31e735144b395a2ab9a515cb18fe}{map\+\_\+val\+\_\+table\+\_\+path}} (self)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a8290cbcbba45ef85e7965c5870556f91}{create\+\_\+dataset\+\_\+table}} (self, \mbox{\hyperlink{classutils_1_1datasets_1_1LoadImagesAndLabels}{Load\+Images\+And\+Labels}} dataset, Dict\mbox{[}int, str\mbox{]} class\+\_\+to\+\_\+id, str name=\textquotesingle{}dataset\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7339d171a02413a77f1bed6df33eece1}{log\+\_\+training\+\_\+progress}} (self, predn, path, names)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a14ca4d53a7f212016755552afb7cbdd2}{val\+\_\+one\+\_\+image}} (self, pred, predn, path, names, im)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af518547728e95e6813d22f4dfb1ae522}{log}} (self, log\+\_\+dict)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac195719065cb30a78d3c33a66fbd6aff}{end\+\_\+epoch}} (self, best\+\_\+result=False)
+\item 
+def \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac9b8845d8f202586188fa8e820965df4}{finish\+\_\+run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a9a6dc7636680a13ee6ed2eba53b5a51b}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a9a6dc7636680a13ee6ed2eba53b5a51b}} 
+{\bfseries job\+\_\+type}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a57e419d95c85e27e59c31929552648fc}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a57e419d95c85e27e59c31929552648fc}} 
+{\bfseries wandb\+\_\+run}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ad1d6bb3664e7bfdb8541965b73c96e79}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ad1d6bb3664e7bfdb8541965b73c96e79}} 
+{\bfseries train\+\_\+artifact}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5c803ee90b9b85b32d91972b6a48ba7d}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5c803ee90b9b85b32d91972b6a48ba7d}} 
+{\bfseries val\+\_\+artifact\+\_\+path}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_adae90741d0dc70db4f9cb34df2850d9e}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_adae90741d0dc70db4f9cb34df2850d9e}} 
+{\bfseries result\+\_\+artifact}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a2d7b8f182dde84ed85bbf206d6f24ebe}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a2d7b8f182dde84ed85bbf206d6f24ebe}} 
+{\bfseries result\+\_\+table}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5f717ab80b097978923978ebb62561cf}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5f717ab80b097978923978ebb62561cf}} 
+{\bfseries bbox\+\_\+media\+\_\+panel\+\_\+images}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7dc1eb36380a7f332dc1f381f4f1a68e}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7dc1eb36380a7f332dc1f381f4f1a68e}} 
+{\bfseries val\+\_\+table\+\_\+path\+\_\+map}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ab9ebf9a4808597e788b7f199dde98d60}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ab9ebf9a4808597e788b7f199dde98d60}} 
+{\bfseries max\+\_\+imgs\+\_\+to\+\_\+log}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5d5d0699334c7e24621ed6fd7eb223e6}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a5d5d0699334c7e24621ed6fd7eb223e6}} 
+{\bfseries wandb\+\_\+artifact\+\_\+data\+\_\+dict}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a899bc3aa8e09967a2e5181fa73eb7a0d}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a899bc3aa8e09967a2e5181fa73eb7a0d}} 
+{\bfseries data\+\_\+dict}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a0b6c26f7212e3045af147d4dfa8e5d57}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a0b6c26f7212e3045af147d4dfa8e5d57}} 
+{\bfseries current\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_aad2114127ac19690e68239360f7600b0}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_aad2114127ac19690e68239360f7600b0}} 
+{\bfseries bbox\+\_\+interval}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ae5fa7cb29ffb1c683034d5589391aa69}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ae5fa7cb29ffb1c683034d5589391aa69}} 
+{\bfseries weights}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a79dc38e4c05ccee9c17139a0e4286cdb}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a79dc38e4c05ccee9c17139a0e4286cdb}} 
+{\bfseries val\+\_\+artifact}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a6786d6ad05b1dec2d2742fab7b248896}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a6786d6ad05b1dec2d2742fab7b248896}} 
+{\bfseries val\+\_\+table}
+\item 
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_abcf0cbcec7494c107f282814a94c260d}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_abcf0cbcec7494c107f282814a94c260d}} 
+{\bfseries log\+\_\+dict}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Log training runs, datasets, models, and predictions to Weights & Biases.
+
+This logger sends information to W&B at wandb.ai. By default, this information
+includes hyperparameters, system configuration and metrics, model metrics,
+and basic data metrics and analyses.
+
+By providing additional command line arguments to train.py, datasets,
+models and predictions can also be logged.
+
+For more on how this logger is used, see the Weights & Biases documentation:
+https://docs.wandb.com/guides/integrations/yolov5
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a83d64a9e7dba70fea7760934eb789b4b}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a83d64a9e7dba70fea7760934eb789b4b}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opt,  }\item[{}]{run\+\_\+id = {\ttfamily None},  }\item[{}]{job\+\_\+type = {\ttfamily \textquotesingle{}Training\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}- Initialize WandbLogger instance
+- Upload dataset if opt.upload_dataset is True
+- Setup trainig processes if job_type is 'Training'
+
+arguments:
+opt (namespace) -- Commandline arguments for this run
+run_id (str) -- Run ID of W&B run to be resumed
+job_type (str) -- To set the job_type for this run\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02ad1073cee7879fa78f5e9f8245d0ec}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02ad1073cee7879fa78f5e9f8245d0ec}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!check\_and\_upload\_dataset@{check\_and\_upload\_dataset}}
+\index{check\_and\_upload\_dataset@{check\_and\_upload\_dataset}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{check\_and\_upload\_dataset()}{check\_and\_upload\_dataset()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+check\+\_\+and\+\_\+upload\+\_\+dataset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if the dataset format is compatible and upload it as W&B artifact
+
+arguments:
+opt (namespace)-- Commandline arguments for current run
+
+returns:
+Updated dataset info dictionary where local dataset paths are replaced by WAND_ARFACT_PREFIX links.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a8290cbcbba45ef85e7965c5870556f91}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a8290cbcbba45ef85e7965c5870556f91}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!create\_dataset\_table@{create\_dataset\_table}}
+\index{create\_dataset\_table@{create\_dataset\_table}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{create\_dataset\_table()}{create\_dataset\_table()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+create\+\_\+dataset\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classutils_1_1datasets_1_1LoadImagesAndLabels}{Load\+Images\+And\+Labels}}}]{dataset,  }\item[{Dict\mbox{[}int, str\mbox{]}}]{class\+\_\+to\+\_\+id,  }\item[{str }]{name = {\ttfamily \textquotesingle{}dataset\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create and return W&B artifact containing W&B Table of the dataset.
+
+arguments:
+dataset -- instance of LoadImagesAndLabels class used to iterate over the data to build Table
+class_to_id -- hash map that maps class ids to labels
+name -- name of the artifact
+
+returns:
+dataset artifact to be logged or used
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02b97b25f4097cd2a9ff8e1e8e58d170}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a02b97b25f4097cd2a9ff8e1e8e58d170}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!download\_dataset\_artifact@{download\_dataset\_artifact}}
+\index{download\_dataset\_artifact@{download\_dataset\_artifact}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{download\_dataset\_artifact()}{download\_dataset\_artifact()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+download\+\_\+dataset\+\_\+artifact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{alias }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}download the model checkpoint artifact if the path starts with WANDB_ARTIFACT_PREFIX
+
+arguments:
+path -- path of the dataset to be used for training
+alias (str)-- alias of the artifact to be download/used for training
+
+returns:
+(str, wandb.Artifact) -- path of the downladed dataset and it's corresponding artifact object if dataset
+is found otherwise returns (None, None)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a0f540d146fc423233eb90e9d70cee304}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a0f540d146fc423233eb90e9d70cee304}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!download\_model\_artifact@{download\_model\_artifact}}
+\index{download\_model\_artifact@{download\_model\_artifact}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{download\_model\_artifact()}{download\_model\_artifact()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+download\+\_\+model\+\_\+artifact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}download the model checkpoint artifact if the resume path starts with WANDB_ARTIFACT_PREFIX
+
+arguments:
+opt (namespace) -- Commandline arguments for this run
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac195719065cb30a78d3c33a66fbd6aff}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac195719065cb30a78d3c33a66fbd6aff}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!end\_epoch@{end\_epoch}}
+\index{end\_epoch@{end\_epoch}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{end\_epoch()}{end\_epoch()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+end\+\_\+epoch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{best\+\_\+result = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}commit the log_dict, model artifacts and Tables to W&B and flush the log_dict.
+
+arguments:
+best_result (boolean): Boolean representing if the result of this evaluation is best or not
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac9b8845d8f202586188fa8e820965df4}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_ac9b8845d8f202586188fa8e820965df4}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!finish\_run@{finish\_run}}
+\index{finish\_run@{finish\_run}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{finish\_run()}{finish\_run()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+finish\+\_\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Log metrics if any and finish the current W&B run
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af518547728e95e6813d22f4dfb1ae522}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af518547728e95e6813d22f4dfb1ae522}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!log@{log}}
+\index{log@{log}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+log (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{log\+\_\+dict }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}save the metrics to the logging dictionary
+
+arguments:
+log_dict (Dict) -- metrics/media to be logged in current step
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af7fe5e712739ef5d2b519fe1c85ff5dd}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_af7fe5e712739ef5d2b519fe1c85ff5dd}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!log\_dataset\_artifact@{log\_dataset\_artifact}}
+\index{log\_dataset\_artifact@{log\_dataset\_artifact}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{log\_dataset\_artifact()}{log\_dataset\_artifact()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+log\+\_\+dataset\+\_\+artifact (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+file,  }\item[{}]{single\+\_\+cls,  }\item[{}]{project,  }\item[{}]{overwrite\+\_\+config = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Log the dataset as W&B artifact and return the new data file with W&B links
+
+arguments:
+data_file (str) -- the .yaml file with information about the dataset like - path, classes etc.
+single_class (boolean)  -- train multi-class data as single-class
+project (str) -- project name. Used to construct the artifact path
+overwrite_config (boolean) -- overwrites the data.yaml file if set to true otherwise creates a new
+file with _wandb postfix. Eg -> data_wandb.yaml
+
+returns:
+the new .yaml file with artifact links. it can be used to start training directly from artifacts
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a4d2428127c8983c17082c25b052ef13c}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a4d2428127c8983c17082c25b052ef13c}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!log\_model@{log\_model}}
+\index{log\_model@{log\_model}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{log\_model()}{log\_model()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+log\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{opt,  }\item[{}]{epoch,  }\item[{}]{fitness\+\_\+score,  }\item[{}]{best\+\_\+model = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Log the model checkpoint as W&B artifact
+
+arguments:
+path (Path)   -- Path of directory containing the checkpoints
+opt (namespace) -- Command line arguments for this run
+epoch (int)  -- Current epoch number
+fitness_score (float) -- fitness score for current epoch
+best_model (boolean) -- Boolean representing if the current checkpoint is the best yet.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7339d171a02413a77f1bed6df33eece1}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7339d171a02413a77f1bed6df33eece1}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!log\_training\_progress@{log\_training\_progress}}
+\index{log\_training\_progress@{log\_training\_progress}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{log\_training\_progress()}{log\_training\_progress()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+log\+\_\+training\+\_\+progress (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{predn,  }\item[{}]{path,  }\item[{}]{names }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build evaluation Table. Uses reference from validation dataset table.
+
+arguments:
+predn (list): list of predictions in the native space in the format - [xmin, ymin, xmax, ymax, confidence, class]
+path (str): local path of the current evaluation image
+names (dict(int, str)): hash map that maps class ids to labels
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_aae2e31e735144b395a2ab9a515cb18fe}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_aae2e31e735144b395a2ab9a515cb18fe}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!map\_val\_table\_path@{map\_val\_table\_path}}
+\index{map\_val\_table\_path@{map\_val\_table\_path}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{map\_val\_table\_path()}{map\_val\_table\_path()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+map\+\_\+val\+\_\+table\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Map the validation dataset Table like name of file -> it's id in the W&B Table.
+Useful for - referencing artifacts for evaluation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7f811881a3feaa10b768a65f8a9617db}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a7f811881a3feaa10b768a65f8a9617db}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!setup\_training@{setup\_training}}
+\index{setup\_training@{setup\_training}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{setup\_training()}{setup\_training()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+setup\+\_\+training (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Setup the necessary processes for training YOLO models:
+  - Attempt to download model checkpoint and dataset artifacts if opt.resume stats with WANDB_ARTIFACT_PREFIX
+  - Update data_dict, to contain info of previous run if resumed and the paths of dataset artifact if downloaded
+  - Setup log_dict, initialize bbox_interval
+
+arguments:
+opt (namespace) -- commandline arguments for this run\end{DoxyVerb}
+ \mbox{\Hypertarget{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a14ca4d53a7f212016755552afb7cbdd2}\label{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger_a14ca4d53a7f212016755552afb7cbdd2}} 
+\index{utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}!val\_one\_image@{val\_one\_image}}
+\index{val\_one\_image@{val\_one\_image}!utils.loggers.wandb.wandb\_utils.WandbLogger@{utils.loggers.wandb.wandb\_utils.WandbLogger}}
+\doxysubsubsection{\texorpdfstring{val\_one\_image()}{val\_one\_image()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+Wandb\+Logger.\+val\+\_\+one\+\_\+image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pred,  }\item[{}]{predn,  }\item[{}]{path,  }\item[{}]{names,  }\item[{}]{im }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Log validation data for one image. updates the result Table if validation dataset is uploaded and log bbox media panel
+
+arguments:
+pred (list): list of scaled predictions in the format - [xmin, ymin, xmax, ymax, confidence, class]
+predn (list): list of predictions in the native space - [xmin, ymin, xmax, ymax, confidence, class]
+path (str): local path of the current evaluation image
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/yolov5/utils/loggers/wandb/wandb\+\_\+utils.\+py\end{DoxyCompactItemize}

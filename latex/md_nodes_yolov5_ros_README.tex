@@ -1,0 +1,50 @@
+This is a R\+OS interface for using Y\+O\+L\+Ov5 for real time object detection on a R\+OS image topic. It supports inference on multiple deep learning frameworks used in the \href{https://github.com/ultralytics/yolov5}{\texttt{ official Y\+O\+L\+Ov5 repository}}.\hypertarget{md_nodes_yolov5_ros_README_autotoc_md1}{}\doxysection{Installation}\label{md_nodes_yolov5_ros_README_autotoc_md1}
+\hypertarget{md_nodes_yolov5_ros_README_autotoc_md2}{}\doxysubsection{Dependencies}\label{md_nodes_yolov5_ros_README_autotoc_md2}
+This package is built and tested on Ubuntu 20.\+04 L\+TS and R\+OS Noetic with Python 3.\+8.
+
+
+\begin{DoxyItemize}
+\item Clone the packages to R\+OS workspace and install requirement for Y\+O\+L\+Ov5 submodule\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd <ros\_workspace>/src}
+\DoxyCodeLine{git clone https://github.com/mats-\/robotics/detection\_msgs.git}
+\DoxyCodeLine{git clone -\/-\/recurse-\/submodules https://github.com/mats-\/robotics/yolov5\_ros.git }
+\DoxyCodeLine{cd yolov5\_ros/src/yolov5}
+\DoxyCodeLine{pip install -\/r requirements.txt \# install the requirements for yolov5}
+\end{DoxyCode}
+
+\item Build the R\+OS package\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd <ros\_workspace>}
+\DoxyCodeLine{catkin build yolov5\_ros \# build the ROS package}
+\end{DoxyCode}
+
+\item Make the Python script executable 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd <ros\_workspace>/src/yolov5\_ros/src}
+\DoxyCodeLine{chmod +x detect.py}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_README_autotoc_md3}{}\doxysection{Basic usage}\label{md_nodes_yolov5_ros_README_autotoc_md3}
+Change the parameter for {\ttfamily input\+\_\+image\+\_\+topic} in launch/yolov5.\+launch to any R\+OS topic with message type of {\ttfamily sensor\+\_\+msgs/\+Image} or {\ttfamily sensor\+\_\+msgs/\+Compressed\+Image}. Other parameters can be modified or used as is.
+
+
+\begin{DoxyItemize}
+\item Launch the node\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch yolov5\_ros yolov5.launch}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_README_autotoc_md4}{}\doxysection{Using custom weights and dataset (not tested)}\label{md_nodes_yolov5_ros_README_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Put your weights into {\ttfamily yolov5\+\_\+ros/src/yolov5}
+\item Put the yaml file for your dataset classes into {\ttfamily yolov5\+\_\+ros/src/yolov5/data}
+\item Change related R\+OS parameters in yolov5.\+launch\+: {\ttfamily weights}, {\ttfamily data}
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_README_autotoc_md5}{}\doxysection{Reference}\label{md_nodes_yolov5_ros_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Y\+O\+L\+Ov5 official repository\+: \href{https://github.com/ultralytics/yolov5}{\texttt{ https\+://github.\+com/ultralytics/yolov5}}
+\item Y\+O\+L\+Ov3 R\+OS Py\+Torch\+: \href{https://github.com/eriklindernoren/PyTorch-YOLOv3}{\texttt{ https\+://github.\+com/eriklindernoren/\+Py\+Torch-\/\+Y\+O\+L\+Ov3}}
+\item Darknet R\+OS\+: \href{https://github.com/leggedrobotics/darknet_ros}{\texttt{ https\+://github.\+com/leggedrobotics/darknet\+\_\+ros}} 
+\end{DoxyItemize}

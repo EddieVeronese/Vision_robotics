@@ -1,0 +1,67 @@
+\hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils}{}\doxysection{utils.\+loggers.\+wandb.\+wandb\+\_\+utils Namespace Reference}
+\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils}\index{utils.loggers.wandb.wandb\_utils@{utils.loggers.wandb.wandb\_utils}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutils_1_1loggers_1_1wandb_1_1wandb__utils_1_1WandbLogger}{Wandb\+Logger}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a4f8241baf93755fd1bdeb5b3b0f16b3c}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a4f8241baf93755fd1bdeb5b3b0f16b3c}} 
+def {\bfseries remove\+\_\+prefix} (from\+\_\+string, prefix=W\+A\+N\+D\+B\+\_\+\+A\+R\+T\+I\+F\+A\+C\+T\+\_\+\+P\+R\+E\+F\+IX)
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a2922b9560ce8209c1c1efe9201ad287b}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a2922b9560ce8209c1c1efe9201ad287b}} 
+def {\bfseries check\+\_\+wandb\+\_\+config\+\_\+file} (data\+\_\+config\+\_\+file)
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a13e4c5305a84e799354211167cde8e3c}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a13e4c5305a84e799354211167cde8e3c}} 
+def {\bfseries check\+\_\+wandb\+\_\+dataset} (data\+\_\+file)
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ac0e655b1ac65f854cf1d270f97a288b3}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ac0e655b1ac65f854cf1d270f97a288b3}} 
+def {\bfseries get\+\_\+run\+\_\+info} (run\+\_\+path)
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a4b2d54298ddf0d7a21f75abca91eaca0}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a4b2d54298ddf0d7a21f75abca91eaca0}} 
+def {\bfseries check\+\_\+wandb\+\_\+resume} (opt)
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ac45173855744d42c2a7936d62573f64a}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ac45173855744d42c2a7936d62573f64a}} 
+def {\bfseries process\+\_\+wandb\+\_\+config\+\_\+ddp\+\_\+mode} (opt)
+\item 
+def \mbox{\hyperlink{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a5da76778426c6eedd6cbd17386f9b154}{all\+\_\+logging\+\_\+disabled}} (highest\+\_\+level=logging.\+C\+R\+I\+T\+I\+C\+AL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ab4cad09933fbfcf905799f1b89e2a3a8}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_ab4cad09933fbfcf905799f1b89e2a3a8}} 
+{\bfseries F\+I\+LE} = Path(\+\_\+\+\_\+file\+\_\+\+\_\+).resolve()
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a7442e579ddcc0b671c4e11dc66b6b852}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a7442e579ddcc0b671c4e11dc66b6b852}} 
+{\bfseries R\+O\+OT} = F\+I\+L\+E.\+parents\mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_affdbac7a9e5beb4d7385f873f40427ad}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_affdbac7a9e5beb4d7385f873f40427ad}} 
+{\bfseries wandb} = None
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a09e8b9ff2f96924f4cec130c8af75b07}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a09e8b9ff2f96924f4cec130c8af75b07}} 
+{\bfseries R\+A\+NK} = int(os.\+getenv(\textquotesingle{}R\+A\+NK\textquotesingle{}, -\/1))
+\item 
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_aa9382c1f34eeb6d2faf2d42042485663}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_aa9382c1f34eeb6d2faf2d42042485663}} 
+string {\bfseries W\+A\+N\+D\+B\+\_\+\+A\+R\+T\+I\+F\+A\+C\+T\+\_\+\+P\+R\+E\+F\+IX} = \textquotesingle{}wandb-\/artifact\+://\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Utilities and tools for tracking runs with Weights & Biases.\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a5da76778426c6eedd6cbd17386f9b154}\label{namespaceutils_1_1loggers_1_1wandb_1_1wandb__utils_a5da76778426c6eedd6cbd17386f9b154}} 
+\index{utils.loggers.wandb.wandb\_utils@{utils.loggers.wandb.wandb\_utils}!all\_logging\_disabled@{all\_logging\_disabled}}
+\index{all\_logging\_disabled@{all\_logging\_disabled}!utils.loggers.wandb.wandb\_utils@{utils.loggers.wandb.wandb\_utils}}
+\doxysubsubsection{\texorpdfstring{all\_logging\_disabled()}{all\_logging\_disabled()}}
+{\footnotesize\ttfamily def utils.\+loggers.\+wandb.\+wandb\+\_\+utils.\+all\+\_\+logging\+\_\+disabled (\begin{DoxyParamCaption}\item[{}]{highest\+\_\+level = {\ttfamily logging.CRITICAL} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}source - https://gist.github.com/simon-weber/7853144
+A context manager that will prevent any logging messages triggered during the body from being processed.
+:param highest_level: the maximum logging level in use.
+  This would only need to be changed if a custom level greater than CRITICAL is defined.
+\end{DoxyVerb}
+ 

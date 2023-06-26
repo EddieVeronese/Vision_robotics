@@ -1,0 +1,38 @@
+\hypertarget{classutils_1_1torch__utils_1_1ModelEMA}{}\doxysection{utils.\+torch\+\_\+utils.\+Model\+E\+MA Class Reference}
+\label{classutils_1_1torch__utils_1_1ModelEMA}\index{utils.torch\_utils.ModelEMA@{utils.torch\_utils.ModelEMA}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_af0859078a61a317fc874302af51f114c}\label{classutils_1_1torch__utils_1_1ModelEMA_af0859078a61a317fc874302af51f114c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model, decay=0.\+9999, tau=2000, updates=0)
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_a86e17da01dd3b2dc8c50a411e658eea3}\label{classutils_1_1torch__utils_1_1ModelEMA_a86e17da01dd3b2dc8c50a411e658eea3}} 
+def {\bfseries update} (self, model)
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_ab8a7ef4d6f7558fae180ad37092657d6}\label{classutils_1_1torch__utils_1_1ModelEMA_ab8a7ef4d6f7558fae180ad37092657d6}} 
+def {\bfseries update\+\_\+attr} (self, model, include=(), exclude=(\textquotesingle{}process\+\_\+group\textquotesingle{}, \textquotesingle{}reducer\textquotesingle{}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_af4a044afee3bb4faefeef10916fbff2c}\label{classutils_1_1torch__utils_1_1ModelEMA_af4a044afee3bb4faefeef10916fbff2c}} 
+{\bfseries ema}
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_a7aae0b7c28fe72aaad17d9b7f171f17f}\label{classutils_1_1torch__utils_1_1ModelEMA_a7aae0b7c28fe72aaad17d9b7f171f17f}} 
+{\bfseries updates}
+\item 
+\mbox{\Hypertarget{classutils_1_1torch__utils_1_1ModelEMA_a214d2ea83a1b125d95ee917357d551a5}\label{classutils_1_1torch__utils_1_1ModelEMA_a214d2ea83a1b125d95ee917357d551a5}} 
+{\bfseries decay}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Updated Exponential Moving Average (EMA) from https://github.com/rwightman/pytorch-image-models
+Keeps a moving average of everything in the model state_dict (parameters and buffers)
+For EMA details see https://www.tensorflow.org/api_docs/python/tf/train/ExponentialMovingAverage
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/yolov5/utils/torch\+\_\+utils.\+py\end{DoxyCompactItemize}

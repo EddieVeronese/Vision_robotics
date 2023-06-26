@@ -1,0 +1,236 @@
+Install
+
+ 
+
+ \href{https://ultralytics.com/yolov5}{\texttt{ }} 
+
+ ~\newline
+  \href{https://github.com/ultralytics/yolov5/actions}{\texttt{ }} \href{https://zenodo.org/badge/latestdoi/264818686}{\texttt{ }} \href{https://hub.docker.com/r/ultralytics/yolov5}{\texttt{ }} ~\newline
+ \href{https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb}{\texttt{ }} \href{https://www.kaggle.com/ultralytics/yolov5}{\texttt{ }} \href{https://join.slack.com/t/ultralytics/shared_invite/zt-w29ei8bp-jczz7QYUmDtgo6r6KcMIAg}{\texttt{ }} 
+
+~\newline
+ 
+
+ Y\+O\+L\+Ov5 🚀 is a family of object detection architectures and models pretrained on the C\+O\+CO dataset, and represents \href{https://ultralytics.com}{\texttt{ Ultralytics}} open-\/source research into future vision AI methods, incorporating lessons learned and best practices evolved over thousands of hours of research and development. 
+
+
+
+ \href{https://github.com/ultralytics}{\texttt{  }}  \href{https://www.linkedin.com/company/ultralytics}{\texttt{  }}  \href{https://twitter.com/ultralytics}{\texttt{  }}  \href{https://www.producthunt.com/@glenn_jocher}{\texttt{  }}  \href{https://youtube.com/ultralytics}{\texttt{  }}  \href{https://www.facebook.com/ultralytics}{\texttt{  }}  \href{https://www.instagram.com/ultralytics/}{\texttt{  }} 
+
+\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md15}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Documentation$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md15}
+See the \href{https://docs.ultralytics.com}{\texttt{ Y\+O\+L\+Ov5 Docs}} for full documentation on training, testing and deployment.\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md16}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Quick Start Examples$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md16}
+$<$details open$>$
+
+Clone repo and install \href{https://github.com/ultralytics/yolov5/blob/master/requirements.txt}{\texttt{ requirements.\+txt}} in a \href{https://www.python.org/}{\texttt{ {\bfseries{Python$>$=3.\+7.\+0}}}} environment, including \href{https://pytorch.org/get-started/locally/}{\texttt{ {\bfseries{Py\+Torch$>$=1.\+7}}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/ultralytics/yolov5  \# clone}
+\DoxyCodeLine{cd yolov5}
+\DoxyCodeLine{pip install -\/r requirements.txt  \# install}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+$<$details open$>$
+
+Inference 
+
+Inference with Y\+O\+L\+Ov5 and \href{https://github.com/ultralytics/yolov5/issues/36}{\texttt{ Py\+Torch Hub}} . \href{https://github.com/ultralytics/yolov5/tree/master/models}{\texttt{ Models}} download automatically from the latest Y\+O\+L\+Ov5 \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ release}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import torch}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Model}
+\DoxyCodeLine{model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  \# or yolov5m, yolov5l, yolov5x, custom}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Images}
+\DoxyCodeLine{img = 'https://ultralytics.com/images/zidane.jpg'  \# or file, Path, PIL, OpenCV, numpy, list}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Inference}
+\DoxyCodeLine{results = model(img)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Results}
+\DoxyCodeLine{results.print()  \# or .show(), .save(), .crop(), .pandas(), etc.}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+$<$details$>$
+
+Inference with detect.\+py 
+
+{\ttfamily detect.\+py} runs inference on a variety of sources, downloading \href{https://github.com/ultralytics/yolov5/tree/master/models}{\texttt{ models}} automatically from the latest Y\+O\+L\+Ov5 \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ release}} and saving results to {\ttfamily runs/detect}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python detect.py -\/-\/source 0  \# webcam}
+\DoxyCodeLine{                          img.jpg  \# image}
+\DoxyCodeLine{                          vid.mp4  \# video}
+\DoxyCodeLine{                          path/  \# directory}
+\DoxyCodeLine{                          path/*.jpg  \# glob}
+\DoxyCodeLine{                          'https://youtu.be/Zgi9g1ksQHc'  \# YouTube}
+\DoxyCodeLine{                          'rtsp://example.com/media.mp4'  \# RTSP, RTMP, HTTP stream}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+$<$details$>$
+
+Training 
+
+The commands below reproduce Y\+O\+L\+Ov5 \href{https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh}{\texttt{ C\+O\+CO}} results. \href{https://github.com/ultralytics/yolov5/tree/master/models}{\texttt{ Models}} and \href{https://github.com/ultralytics/yolov5/tree/master/data}{\texttt{ datasets}} download automatically from the latest Y\+O\+L\+Ov5 \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ release}}. Training times for Y\+O\+L\+Ov5n/s/m/l/x are 1/2/4/6/8 days on a V100 G\+PU (\href{https://github.com/ultralytics/yolov5/issues/475}{\texttt{ Multi-\/\+G\+PU}} times faster). Use the largest {\ttfamily -\/-\/batch-\/size} possible, or pass {\ttfamily -\/-\/batch-\/size -\/1} for Y\+O\+L\+Ov5 \href{https://github.com/ultralytics/yolov5/pull/5092}{\texttt{ Auto\+Batch}}. Batch sizes shown for V100-\/16\+GB.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python train.py -\/-\/data coco.yaml -\/-\/cfg yolov5n.yaml -\/-\/weights '' -\/-\/batch-\/size 128}
+\DoxyCodeLine{                                       yolov5s                                64}
+\DoxyCodeLine{                                       yolov5m                                40}
+\DoxyCodeLine{                                       yolov5l                                24}
+\DoxyCodeLine{                                       yolov5x                                16}
+\end{DoxyCode}
+
+
+
+
+$<$/details$>$
+
+$<$details open$>$
+
+Tutorials 
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data}{\texttt{ Train Custom Data}}~ 🚀 R\+E\+C\+O\+M\+M\+E\+N\+D\+ED
+\item \href{https://github.com/ultralytics/yolov5/wiki/Tips-for-Best-Training-Results}{\texttt{ Tips for Best Training Results}}~ ☘️ R\+E\+C\+O\+M\+M\+E\+N\+D\+ED
+\item \href{https://github.com/ultralytics/yolov5/issues/1289}{\texttt{ Weights \& Biases Logging}}~ 🌟 N\+EW
+\item \href{https://github.com/ultralytics/yolov5/issues/4975}{\texttt{ Roboflow for Datasets, Labeling, and Active Learning}}~ 🌟 N\+EW
+\item \href{https://github.com/ultralytics/yolov5/issues/475}{\texttt{ Multi-\/\+G\+PU Training}}
+\item \href{https://github.com/ultralytics/yolov5/issues/36}{\texttt{ Py\+Torch Hub}}~ ⭐ N\+EW
+\item \href{https://github.com/ultralytics/yolov5/issues/251}{\texttt{ T\+F\+Lite, O\+N\+NX, Core\+ML, Tensor\+RT Export}} 🚀
+\item \href{https://github.com/ultralytics/yolov5/issues/303}{\texttt{ Test-\/\+Time Augmentation (T\+TA)}}
+\item \href{https://github.com/ultralytics/yolov5/issues/318}{\texttt{ Model Ensembling}}
+\item \href{https://github.com/ultralytics/yolov5/issues/304}{\texttt{ Model Pruning/\+Sparsity}}
+\item \href{https://github.com/ultralytics/yolov5/issues/607}{\texttt{ Hyperparameter Evolution}}
+\item \href{https://github.com/ultralytics/yolov5/issues/1314}{\texttt{ Transfer Learning with Frozen Layers}}~ ⭐ N\+EW
+\item \href{https://github.com/wang-xinyu/tensorrtx}{\texttt{ Tensor\+RT Deployment}}
+\end{DoxyItemize}
+
+$<$/details$>$\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md17}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Environments$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md17}
+Get started in seconds with our verified environments. Click each icon below for details.
+
+ \href{https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb}{\texttt{  }} \href{https://www.kaggle.com/ultralytics/yolov5}{\texttt{  }} \href{https://hub.docker.com/r/ultralytics/yolov5}{\texttt{  }} \href{https://github.com/ultralytics/yolov5/wiki/AWS-Quickstart}{\texttt{  }} \href{https://github.com/ultralytics/yolov5/wiki/GCP-Quickstart}{\texttt{  }} \hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md18}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Integrations$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md18}
+ \href{https://wandb.ai/site?utm_campaign=repo_yolo_readme}{\texttt{  }} \href{https://roboflow.com/?ref=ultralytics}{\texttt{  }} 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Weights and Biases }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Roboflow ⭐ N\+EW  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Weights and Biases }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Roboflow ⭐ N\+EW  }\\\cline{1-2}
+\endhead
+\PBS\centering Automatically track and visualize all your Y\+O\+L\+Ov5 training runs in the cloud with \href{https://wandb.ai/site?utm_campaign=repo_yolo_readme}{\texttt{ Weights \& Biases}} &\PBS\centering Label and export your custom datasets directly to Y\+O\+L\+Ov5 for training with \href{https://roboflow.com/?ref=ultralytics}{\texttt{ Roboflow}}  \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md19}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Why Y\+O\+L\+Ov5$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md19}
+
+
+$<$details$>$
+
+Y\+O\+L\+Ov5-\/\+P5 640 Figure (click to expand) 
+
+
+
+$<$/details$>$ $<$details$>$
+
+Figure Notes (click to expand) 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{C\+O\+CO AP val}} denotes m\+AP@0.\+5\+:0.\+95 metric measured on the 5000-\/image \href{http://cocodataset.org}{\texttt{ C\+O\+CO val2017}} dataset over various inference sizes from 256 to 1536.
+\item {\bfseries{G\+PU Speed}} measures average inference time per image on \href{http://cocodataset.org}{\texttt{ C\+O\+CO val2017}} dataset using a \href{https://aws.amazon.com/ec2/instance-types/p3/}{\texttt{ A\+WS p3.\+2xlarge}} V100 instance at batch-\/size 32.
+\item {\bfseries{Efficient\+Det}} data from \href{https://github.com/google/automl}{\texttt{ google/automl}} at batch size 8.
+\item {\bfseries{Reproduce}} by {\ttfamily python val.\+py -\/-\/task study -\/-\/data coco.\+yaml -\/-\/iou 0.\+7 -\/-\/weights yolov5n6.\+pt yolov5s6.\+pt yolov5m6.\+pt yolov5l6.\+pt yolov5x6.\+pt} $<$/details$>$
+\end{DoxyItemize}\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md20}{}\doxysubsubsection{Pretrained Checkpoints}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md20}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{9}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Model }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ size~\newline
+\textsuperscript{(pixels) }}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{ m\+AP\textsuperscript{val~\newline
+0.\+5\+:0.\+95 }}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{ m\+AP\textsuperscript{val~\newline
+0.\+5 }}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{C\+PU b1$<$br$>$(ms) }}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{V100 b1$<$br$>$(ms) }}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{V100 b32$<$br$>$(ms) }}}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ params~\newline
+\textsuperscript{(M) }}}}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ F\+L\+O\+Ps~\newline
+\textsuperscript{@640 (B)  }}}}}}}}}\\\cline{1-9}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Model }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ size~\newline
+\textsuperscript{(pixels) }}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{ m\+AP\textsuperscript{val~\newline
+0.\+5\+:0.\+95 }}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{ m\+AP\textsuperscript{val~\newline
+0.\+5 }}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{C\+PU b1$<$br$>$(ms) }}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{V100 b1$<$br$>$(ms) }}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ Speed~\newline
+\textsuperscript{V100 b32$<$br$>$(ms) }}}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ params~\newline
+\textsuperscript{(M) }}}}}}}}&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ F\+L\+O\+Ps~\newline
+\textsuperscript{@640 (B)  }}}}}}}}}\\\cline{1-9}
+\endhead
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5n}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 640 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 28.\+0 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 45.\+7 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ {\bfseries{45}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ {\bfseries{6.\+3}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ {\bfseries{0.\+6}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ {\bfseries{1.\+9}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ {\bfseries{4.\+5}}  }}}}}}}}\\\cline{1-9}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5s}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 640 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 37.\+4 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 56.\+8 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 98 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 6.\+4 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 0.\+9 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 7.\+2 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 16.\+5  }}}}}}}}\\\cline{1-9}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5m}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 640 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 45.\+4 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 64.\+1 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 224 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 8.\+2 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 1.\+7 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 21.\+2 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 49.\+0  }}}}}}}}\\\cline{1-9}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5l}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 640 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 49.\+0 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 67.\+3 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 430 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 10.\+1 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 2.\+7 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 46.\+5 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 109.\+1  }}}}}}}}\\\cline{1-9}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5x}} }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 640 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 50.\+7 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 68.\+9 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 766 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 12.\+1 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 4.\+8 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 86.\+7 }}}}}}}}&\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ 205.\+7  }}}}}}}}\\\cline{1-9}
+\end{longtabu}
+$\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ $\vert$\href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5n6}} $\vert$1280 $\vert$36.0 $\vert$54.4 $\vert$153 $\vert$8.1 $\vert$2.1 $\vert$3.2 $\vert$4.6 $\vert$\href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5s6}} $\vert$1280 $\vert$44.8 $\vert$63.7 $\vert$385 $\vert$8.2 $\vert$3.6 $\vert$12.6 $\vert$16.8 $\vert$\href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5m6}} $\vert$1280 $\vert$51.3 $\vert$69.3 $\vert$887 $\vert$11.1 $\vert$6.8 $\vert$35.7 $\vert$50.0 $\vert$\href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5l6}} $\vert$1280 $\vert$53.7 $\vert$71.3 $\vert$1784 $\vert$15.8 $\vert$10.5 $\vert$76.8 $\vert$111.4 $\vert$\href{https://github.com/ultralytics/yolov5/releases}{\texttt{ Y\+O\+L\+Ov5x6}}~\newline
++ \href{https://github.com/ultralytics/yolov5/issues/303}{\texttt{ T\+TA}}$\vert$1280~\newline
+1536 $\vert$55.0~\newline
+$\ast$$\ast$55.8$\ast$$\ast$ $\vert$72.7~\newline
+$\ast$$\ast$72.7$\ast$$\ast$ $\vert$3136~\newline
+-\/ $\vert$26.2~\newline
+-\/ $\vert$19.4~\newline
+-\/ $\vert$140.7~\newline
+-\/ $\vert$209.8~\newline
+-\/
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{$<$details$>$}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{Table Notes (click to expand) }}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{
+\begin{DoxyItemize}
+\item All checkpoints are trained to 300 epochs with default settings. Nano and Small models use \href{https://github.com/ultralytics/yolov5/blob/master/data/hyps/hyp.scratch-low.yaml}{\texttt{ hyp.\+scratch-\/low.\+yaml}} hyps, all others use \href{https://github.com/ultralytics/yolov5/blob/master/data/hyps/hyp.scratch-high.yaml}{\texttt{ hyp.\+scratch-\/high.\+yaml}}.
+\item {\bfseries{m\+AP\textsuperscript{val}}} values are for single-\/model single-\/scale on \href{http://cocodataset.org}{\texttt{ C\+O\+CO val2017}} dataset.~\newline
+Reproduce by {\ttfamily python val.\+py -\/-\/data coco.\+yaml -\/-\/img 640 -\/-\/conf 0.\+001 -\/-\/iou 0.\+65}
+\item {\bfseries{Speed}} averaged over C\+O\+CO val images using a \href{https://aws.amazon.com/ec2/instance-types/p3/}{\texttt{ A\+WS p3.\+2xlarge}} instance. N\+MS times ($\sim$1 ms/img) not included.~\newline
+Reproduce by {\ttfamily python val.\+py -\/-\/data coco.\+yaml -\/-\/img 640 -\/-\/task speed -\/-\/batch 1}
+\item {\bfseries{T\+TA}} \href{https://github.com/ultralytics/yolov5/issues/303}{\texttt{ Test Time Augmentation}} includes reflection and scale augmentations.~\newline
+Reproduce by {\ttfamily python val.\+py -\/-\/data coco.\+yaml -\/-\/img 1536 -\/-\/iou 0.\+7 -\/-\/augment}
+\end{DoxyItemize}}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{$<$/details$>$}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{}}}}}}}}\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md21}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Contribute$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md21}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ We love your input! We want to make contributing to Y\+O\+L\+Ov5 as easy and transparent as possible. Please see our Contributing Guide to get started, and fill out the \href{https://ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey}{\texttt{ Y\+O\+L\+Ov5 Survey}} to send us feedback on your experiences. Thank you to all our contributors!}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\href{https://github.com/ultralytics/yolov5/graphs/contributors}{\texttt{ }}}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{}}}}}}}}\hypertarget{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md22}{}\doxysubsection{$<$div align=\char`\"{}center\char`\"{}$>$\+Contact$<$/div$>$}\label{md_nodes_yolov5_ros_src_yolov5_README_autotoc_md22}
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ For Y\+O\+L\+Ov5 bugs and feature requests please visit \href{https://github.com/ultralytics/yolov5/issues}{\texttt{ Git\+Hub Issues}}. For business inquiries or professional support requests please visit \href{https://ultralytics.com/contact}{\texttt{ https\+://ultralytics.\+com/contact}}.}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{~\newline
+}}}}}}}}
+
+\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{\textsuperscript{ \href{https://github.com/ultralytics}{\texttt{  }}  \href{https://www.linkedin.com/company/ultralytics}{\texttt{  }}  \href{https://twitter.com/ultralytics}{\texttt{  }}  \href{https://www.producthunt.com/@glenn_jocher}{\texttt{  }}  \href{https://youtube.com/ultralytics}{\texttt{  }}  \href{https://www.facebook.com/ultralytics}{\texttt{  }}  \href{https://www.instagram.com/ultralytics/}{\texttt{  }}  }}}}}}}}

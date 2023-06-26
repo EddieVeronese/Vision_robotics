@@ -1,0 +1,55 @@
+\hypertarget{classutils_1_1activations_1_1AconC}{}\doxysection{utils.\+activations.\+AconC Class Reference}
+\label{classutils_1_1activations_1_1AconC}\index{utils.activations.AconC@{utils.activations.AconC}}
+
+
+Inheritance diagram for utils.\+activations.\+AconC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classutils_1_1activations_1_1AconC__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for utils.\+activations.\+AconC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classutils_1_1activations_1_1AconC__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1activations_1_1AconC_a3bf71adb9c7ee5b6fd247d2a16605d44}\label{classutils_1_1activations_1_1AconC_a3bf71adb9c7ee5b6fd247d2a16605d44}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, c1)
+\item 
+\mbox{\Hypertarget{classutils_1_1activations_1_1AconC_aa68f470463b17437f17cfee24a73c9cb}\label{classutils_1_1activations_1_1AconC_aa68f470463b17437f17cfee24a73c9cb}} 
+def {\bfseries forward} (self, x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1activations_1_1AconC_a4cd3602e4b4680dcca52e827d20eaa24}\label{classutils_1_1activations_1_1AconC_a4cd3602e4b4680dcca52e827d20eaa24}} 
+{\bfseries p1}
+\item 
+\mbox{\Hypertarget{classutils_1_1activations_1_1AconC_a929ecfa2a1208396c98493f733efb707}\label{classutils_1_1activations_1_1AconC_a929ecfa2a1208396c98493f733efb707}} 
+{\bfseries p2}
+\item 
+\mbox{\Hypertarget{classutils_1_1activations_1_1AconC_ac19cf98f6f113e6c5be46ab694be8a18}\label{classutils_1_1activations_1_1AconC_ac19cf98f6f113e6c5be46ab694be8a18}} 
+{\bfseries beta}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}ACON activation (activate or not).
+AconC: (p1*x-p2*x) * sigmoid(beta*(p1*x-p2*x)) + p2*x, beta is a learnable parameter
+according to "Activate or Not: Learning Customized Activation" <https://arxiv.org/pdf/2009.04759.pdf>.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/yolov5/utils/activations.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classutils_1_1metrics_1_1ConfusionMatrix}{}\doxysection{utils.\+metrics.\+Confusion\+Matrix Class Reference}
+\label{classutils_1_1metrics_1_1ConfusionMatrix}\index{utils.metrics.ConfusionMatrix@{utils.metrics.ConfusionMatrix}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a0c8ffb0cb268b39019b9d76889110f7d}\label{classutils_1_1metrics_1_1ConfusionMatrix_a0c8ffb0cb268b39019b9d76889110f7d}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, nc, conf=0.\+25, iou\+\_\+thres=0.\+45)
+\item 
+def \mbox{\hyperlink{classutils_1_1metrics_1_1ConfusionMatrix_af1657b2e6e9b014c998376c4bec2454e}{process\+\_\+batch}} (self, detections, labels)
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a3f0dd5d020896b7a73397701d71880ce}\label{classutils_1_1metrics_1_1ConfusionMatrix_a3f0dd5d020896b7a73397701d71880ce}} 
+def {\bfseries matrix} (self)
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_ae27007cf07f26b8e7fea81c5f807e2c6}\label{classutils_1_1metrics_1_1ConfusionMatrix_ae27007cf07f26b8e7fea81c5f807e2c6}} 
+def {\bfseries tp\+\_\+fp} (self)
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a3ca9f808e6e0a87501ae1af28a492704}\label{classutils_1_1metrics_1_1ConfusionMatrix_a3ca9f808e6e0a87501ae1af28a492704}} 
+def {\bfseries plot} (self, normalize=True, save\+\_\+dir=\textquotesingle{}\textquotesingle{}, names=())
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_ad4b94b195f1cb8f56d64a673e885d231}\label{classutils_1_1metrics_1_1ConfusionMatrix_ad4b94b195f1cb8f56d64a673e885d231}} 
+def {\bfseries print} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a35a1d67070041abfa9d9722c04a86b17}\label{classutils_1_1metrics_1_1ConfusionMatrix_a35a1d67070041abfa9d9722c04a86b17}} 
+{\bfseries matrix}
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a16156a61830be779c26d10d8e0a4c6d0}\label{classutils_1_1metrics_1_1ConfusionMatrix_a16156a61830be779c26d10d8e0a4c6d0}} 
+{\bfseries nc}
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a2dcff73edf46d4f7a2da22b4bb601f58}\label{classutils_1_1metrics_1_1ConfusionMatrix_a2dcff73edf46d4f7a2da22b4bb601f58}} 
+{\bfseries conf}
+\item 
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_a1fcbd29ef0a9c2ac7e8fa992b668be60}\label{classutils_1_1metrics_1_1ConfusionMatrix_a1fcbd29ef0a9c2ac7e8fa992b668be60}} 
+{\bfseries iou\+\_\+thres}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classutils_1_1metrics_1_1ConfusionMatrix_af1657b2e6e9b014c998376c4bec2454e}\label{classutils_1_1metrics_1_1ConfusionMatrix_af1657b2e6e9b014c998376c4bec2454e}} 
+\index{utils.metrics.ConfusionMatrix@{utils.metrics.ConfusionMatrix}!process\_batch@{process\_batch}}
+\index{process\_batch@{process\_batch}!utils.metrics.ConfusionMatrix@{utils.metrics.ConfusionMatrix}}
+\doxysubsubsection{\texorpdfstring{process\_batch()}{process\_batch()}}
+{\footnotesize\ttfamily def utils.\+metrics.\+Confusion\+Matrix.\+process\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{detections,  }\item[{}]{labels }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return intersection-over-union (Jaccard index) of boxes.
+Both sets of boxes are expected to be in (x1, y1, x2, y2) format.
+Arguments:
+    detections (Array[N, 6]), x1, y1, x2, y2, conf, class
+    labels (Array[M, 5]), class, x1, y1, x2, y2
+Returns:
+    None, updates confusion matrix accordingly
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/yolov5/utils/metrics.\+py\end{DoxyCompactItemize}
