@@ -225,27 +225,27 @@ class Node:
         """
 
         if case == "X1-Y1-Z2":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y1-z2.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y1-z2.ply"
         elif case == "X1-Y2-Z1":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y2-z1.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y2-z1.ply"
         elif case == "X1-Y2-Z2":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y2-z2.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y2-z2.ply"
         elif case == "X1-Y2-Z2-CHAMFER":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y2-z2-chamfer.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y2-z2-chamfer.ply"
         elif case == "X1-Y2-Z2-TWINFILLET":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y2-z2-twinfillet.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y2-z2-twinfillet.ply"
         elif case == "X1-Y3-Z2":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y3-z2.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y3-z2.ply"
         elif case == "X1-Y3-Z2-FILLER":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y3-z2-fillet.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y3-z2-fillet.ply"
         elif case == "X1-Y4-Z1":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y4-z1.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y4-z1.ply"
         elif case == "X1-Y4-Z2":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x1-y4-z2.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x1-y4-z2.ply"
         elif case == "X2-Y2-Z2":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x2-y2-z2.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x2-y2-z2.ply"
         elif case == "X2-Y2-Z2-FILLET":
-            self.pcd_file = "/home/eddie/ros_ws/src/vision/nodes/ply/x2-y2-z2-fillet.ply"
+            self.pcd_file = "../ros_ws/src/vision/nodes/ply/x2-y2-z2-fillet.ply"
         else:
             print("PLY file error")
 
