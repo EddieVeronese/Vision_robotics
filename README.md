@@ -18,11 +18,12 @@ open3d: Open3D is an open-source library for 3D data manipulation and visualizat
 
 ```pip install open3d```
 
-Running the Code
 
 ## How to run
 
-Once you have successfully installed all the dependencies, you can execute the provided code with the following command
+Once you have successfully installed all the dependencies, you have to clone this repository inside ros workspace and you can execute the provided code with the following command
+
+```cd ros_ws```
 
 ```source devel/setup.bash```
 
