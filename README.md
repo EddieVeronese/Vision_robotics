@@ -4,7 +4,7 @@ To install YoloV5 follow this repository https://github.com/ultralytics/yolov5
 
 Follow the steps below to install all the necessary dependencies.
 
-Installation of Dependencies
+### Installation of Dependencies
 
 rospy: This package is part of the ROS (Robot Operating System) framework and is used for developing ROS applications in Python. You can install it by running the following command:
 
