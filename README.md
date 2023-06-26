@@ -1,6 +1,6 @@
 # Vision Robotics
 ## Installation 
-To install YoloV5 follow this repository https://github.com/ultralytics/yolov5 
+To install YoloV5 dependencies follow this repository https://github.com/ultralytics/yolov5 
 
 Follow the steps below to install all the necessary dependencies.
 
