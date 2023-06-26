@@ -20,6 +20,8 @@ open3d: Open3D is an open-source library for 3D data manipulation and visualizat
 
 Running the Code
 
+## How to run
+
 Once you have successfully installed all the dependencies, you can execute the provided code with the following command
 
 ```source devel/setup.bash```
@@ -28,4 +30,4 @@ Once you have successfully installed all the dependencies, you can execute the p
 
 ```roslaunch yolov5_ros```
 
-You can find the doxygen 
+You can find the doxygen documentation here [index.html](https://github.com/EddieVeronese/Vision_robotics/blob/main/html/index.html)
