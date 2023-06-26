@@ -1,0 +1,125 @@
+\hypertarget{classdetect_1_1Yolov5Detector}{}\doxysection{detect.\+Yolov5\+Detector Class Reference}
+\label{classdetect_1_1Yolov5Detector}\index{detect.Yolov5Detector@{detect.Yolov5Detector}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdetect_1_1Yolov5Detector_ac97619d4d403c17f66a2b1adf2fdfc22}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classdetect_1_1Yolov5Detector}{Yolov5\+Detector}} class. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdetect_1_1Yolov5Detector_a39dc0c88b6b1070b2b8dd3eed7a96372}{callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Processes the received image, performs inference, and publishes the prediction results. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdetect_1_1Yolov5Detector_a5e850ba1d750031cd4d3d436605a5151}{preprocess}} (self, img)
+\begin{DoxyCompactList}\small\item\em Preprocesses the input image and returns a tuple with the preprocessed image and the original image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_ac324a729d0006574c41d88ac537b6362}\label{classdetect_1_1Yolov5Detector_ac324a729d0006574c41d88ac537b6362}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_ac324a729d0006574c41d88ac537b6362}{conf\+\_\+thres}}
+\begin{DoxyCompactList}\small\item\em Confidence threshold for predictions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_acff3fa5e543b0fd94901ea0e656080a4}\label{classdetect_1_1Yolov5Detector_acff3fa5e543b0fd94901ea0e656080a4}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_acff3fa5e543b0fd94901ea0e656080a4}{iou\+\_\+thres}}
+\begin{DoxyCompactList}\small\item\em I\+OU threshold for non-\/maximum suppression. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a89017820fa1e5276df91e758a3e59fd9}\label{classdetect_1_1Yolov5Detector_a89017820fa1e5276df91e758a3e59fd9}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a89017820fa1e5276df91e758a3e59fd9}{agnostic\+\_\+nms}}
+\begin{DoxyCompactList}\small\item\em Boolean indicating whether to use agnostic N\+MS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_aeea73391bf08480ff4bee352ffad8863}\label{classdetect_1_1Yolov5Detector_aeea73391bf08480ff4bee352ffad8863}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_aeea73391bf08480ff4bee352ffad8863}{max\+\_\+det}}
+\begin{DoxyCompactList}\small\item\em Maximum number of detections to keep after N\+MS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a0dd9ea3230b3daa62c5afe4d74b14e25}\label{classdetect_1_1Yolov5Detector_a0dd9ea3230b3daa62c5afe4d74b14e25}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a0dd9ea3230b3daa62c5afe4d74b14e25}{classes}}
+\begin{DoxyCompactList}\small\item\em List of object classes to dete. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a4954ce205893835d9f45dcc59018efa4}\label{classdetect_1_1Yolov5Detector_a4954ce205893835d9f45dcc59018efa4}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a4954ce205893835d9f45dcc59018efa4}{line\+\_\+thickness}}
+\begin{DoxyCompactList}\small\item\em Line thickness for drawing bounding boxes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_adabbc6ba5aad299ec50771f6c9cf52ff}\label{classdetect_1_1Yolov5Detector_adabbc6ba5aad299ec50771f6c9cf52ff}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_adabbc6ba5aad299ec50771f6c9cf52ff}{view\+\_\+image}}
+\begin{DoxyCompactList}\small\item\em Boolean to display the image with annotations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a5e67cf4c09caae2dfe0a6520cee4e19e}\label{classdetect_1_1Yolov5Detector_a5e67cf4c09caae2dfe0a6520cee4e19e}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a5e67cf4c09caae2dfe0a6520cee4e19e}{device}}
+\begin{DoxyCompactList}\small\item\em Path to the weights file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_abd00cf1f1724483e9732fa8eb309824c}\label{classdetect_1_1Yolov5Detector_abd00cf1f1724483e9732fa8eb309824c}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_abd00cf1f1724483e9732fa8eb309824c}{model}}
+\begin{DoxyCompactList}\small\item\em Y\+O\+L\+Ov5 model instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a3c92b831a75a02dd5383f025d231514c}\label{classdetect_1_1Yolov5Detector_a3c92b831a75a02dd5383f025d231514c}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a3c92b831a75a02dd5383f025d231514c}{engine}}
+\begin{DoxyCompactList}\small\item\em Model stride. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_af1d264bbc02d60be0f9ed02bf899bd0c}\label{classdetect_1_1Yolov5Detector_af1d264bbc02d60be0f9ed02bf899bd0c}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_af1d264bbc02d60be0f9ed02bf899bd0c}{img\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Inference size (width, height) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_ad96d20931153309d7b8d0281a6e96c79}\label{classdetect_1_1Yolov5Detector_ad96d20931153309d7b8d0281a6e96c79}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_ad96d20931153309d7b8d0281a6e96c79}{half}}
+\begin{DoxyCompactList}\small\item\em half precision flag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a187b8167dd0a8d2d9b48180d156d3f0a}\label{classdetect_1_1Yolov5Detector_a187b8167dd0a8d2d9b48180d156d3f0a}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a187b8167dd0a8d2d9b48180d156d3f0a}{compressed\+\_\+input}}
+\begin{DoxyCompactList}\small\item\em Initialize subscriber to Image/\+Compressed\+Image topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a2f03eab76d119b781e7cfcce4fa4d166}\label{classdetect_1_1Yolov5Detector_a2f03eab76d119b781e7cfcce4fa4d166}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a2f03eab76d119b781e7cfcce4fa4d166}{image\+\_\+sub}}
+\begin{DoxyCompactList}\small\item\em Subscriber for Compressed\+Image messages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_adba15f69a9410a9859667fb21e47b1d9}\label{classdetect_1_1Yolov5Detector_adba15f69a9410a9859667fb21e47b1d9}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_adba15f69a9410a9859667fb21e47b1d9}{pred\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Initialize prediction publisher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_acf48cdf1802acf48450acc17ddd7ae32}\label{classdetect_1_1Yolov5Detector_acf48cdf1802acf48450acc17ddd7ae32}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_acf48cdf1802acf48450acc17ddd7ae32}{publish\+\_\+image}}
+\begin{DoxyCompactList}\small\item\em Initialize image publisher. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a552975e353cbfc429f82cb056e2031e2}\label{classdetect_1_1Yolov5Detector_a552975e353cbfc429f82cb056e2031e2}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_a552975e353cbfc429f82cb056e2031e2}{image\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Subscriber for Image messages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_ae417b0b062c2c65fb90b657ef0b456a4}\label{classdetect_1_1Yolov5Detector_ae417b0b062c2c65fb90b657ef0b456a4}} 
+\mbox{\hyperlink{classdetect_1_1Yolov5Detector_ae417b0b062c2c65fb90b657ef0b456a4}{bridge}}
+\begin{DoxyCompactList}\small\item\em Open\+CV bridge for converting between R\+OS Image messages and Open\+CV images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_ac97619d4d403c17f66a2b1adf2fdfc22}\label{classdetect_1_1Yolov5Detector_ac97619d4d403c17f66a2b1adf2fdfc22}} 
+\index{detect.Yolov5Detector@{detect.Yolov5Detector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!detect.Yolov5Detector@{detect.Yolov5Detector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def detect.\+Yolov5\+Detector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classdetect_1_1Yolov5Detector}{Yolov5\+Detector}} class. 
+
+Initializes the Y\+O\+L\+Ov5 object detector with the specified parameters and settings. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a39dc0c88b6b1070b2b8dd3eed7a96372}\label{classdetect_1_1Yolov5Detector_a39dc0c88b6b1070b2b8dd3eed7a96372}} 
+\index{detect.Yolov5Detector@{detect.Yolov5Detector}!callback@{callback}}
+\index{callback@{callback}!detect.Yolov5Detector@{detect.Yolov5Detector}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily def detect.\+Yolov5\+Detector.\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Processes the received image, performs inference, and publishes the prediction results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Image message containing the input image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdetect_1_1Yolov5Detector_a5e850ba1d750031cd4d3d436605a5151}\label{classdetect_1_1Yolov5Detector_a5e850ba1d750031cd4d3d436605a5151}} 
+\index{detect.Yolov5Detector@{detect.Yolov5Detector}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!detect.Yolov5Detector@{detect.Yolov5Detector}}
+\doxysubsubsection{\texorpdfstring{preprocess()}{preprocess()}}
+{\footnotesize\ttfamily def detect.\+Yolov5\+Detector.\+preprocess (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{img }\end{DoxyParamCaption})}
+
+
+
+Preprocesses the input image and returns a tuple with the preprocessed image and the original image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image to preprocess. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: A tuple containing the preprocessed image and the original image. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+nodes/yolov5\+\_\+ros/src/detect.\+py\end{DoxyCompactItemize}

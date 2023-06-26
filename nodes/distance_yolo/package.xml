@@ -1,0 +1,20 @@
+<package>
+  <name>distance_yolo</name>
+  <version>0.0.1</version>
+  <description>Calculates the center distance between YOLO bounding boxes and PointCloud data.</description>
+
+  <maintainer email="youremail@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>detection_msgs</build_depend>
+  <build_depend>final_msgs</build_depend> 
+
+  <export>
+    <catkin build_type="python"/>
+  </export>
+</package>

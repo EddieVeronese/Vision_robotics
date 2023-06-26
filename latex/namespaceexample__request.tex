@@ -1,0 +1,22 @@
+\hypertarget{namespaceexample__request}{}\doxysection{example\+\_\+request Namespace Reference}
+\label{namespaceexample__request}\index{example\_request@{example\_request}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceexample__request_a60422ac38f0e17f5830f4df9847f380f}\label{namespaceexample__request_a60422ac38f0e17f5830f4df9847f380f}} 
+string {\bfseries D\+E\+T\+E\+C\+T\+I\+O\+N\+\_\+\+U\+RL} = \char`\"{}http\+://localhost\+:5000/v1/object-\/detection/yolov5s\char`\"{}
+\item 
+\mbox{\Hypertarget{namespaceexample__request_a2f39f13e6b88d1b56a92638c2a4c819f}\label{namespaceexample__request_a2f39f13e6b88d1b56a92638c2a4c819f}} 
+string {\bfseries T\+E\+S\+T\+\_\+\+I\+M\+A\+GE} = \char`\"{}zidane.\+jpg\char`\"{}
+\item 
+\mbox{\Hypertarget{namespaceexample__request_ac314f2afb947e1fda6b7ef4fa6eac76b}\label{namespaceexample__request_ac314f2afb947e1fda6b7ef4fa6eac76b}} 
+{\bfseries image\+\_\+data} = open(T\+E\+S\+T\+\_\+\+I\+M\+A\+GE, \char`\"{}rb\char`\"{}).read()
+\item 
+\mbox{\Hypertarget{namespaceexample__request_a3cf6fb92d0e0606172ab7127ba4e597c}\label{namespaceexample__request_a3cf6fb92d0e0606172ab7127ba4e597c}} 
+{\bfseries response} = requests.\+post(D\+E\+T\+E\+C\+T\+I\+O\+N\+\_\+\+U\+RL, files=\{\char`\"{}image\char`\"{}\+: image\+\_\+data\}).json()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Perform test request\end{DoxyVerb}
+ 
